@@ -9,6 +9,8 @@ The English version of this README will be available soon.
 なお，引用文献のアブストラクトはarXiv API ([https://arxiv.org/help/api/](https://arxiv.org/help/api/))とacl-org/acla-anthology [https://github.com/acl-org/acl-anthology](https://github.com/acl-org/acl-anthology) を用いて取得しており，それらで公開されていない論文や，アブストラクトが提供されていない論文は含まれません．
 
 ## データの形式
+データは以下に示す形式で，dataディレクトリ内のjsonファイルに格納されています．
+ファイルサイズの上限の都合で2つのファイルに分割されています．
 
 ```
 {
