@@ -1,4 +1,4 @@
-# acl-anthology-dataset
+# acl-citation-dataset
 
 The English version of this README will be available soon.
 
