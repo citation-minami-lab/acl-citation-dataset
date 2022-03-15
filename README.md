@@ -2,7 +2,7 @@
 
 The English version of this README will be available soon.
 
-本リポジトリでは，論文執筆支援 [https://aclanthology.org/2021.sdp-1.3/] に向けたデータセット構築を目的として，ACL Anthologyに含まれる論文PDFファイルから抽出した，関連研究の章の本文と，各文に対応する引用文献のタイトルとアブストラクトを含むデータセットを公開しています．
+本リポジトリでは，論文執筆支援 [1] に向けたデータセット構築を目的として，ACL Anthologyに含まれる論文PDFファイルから抽出した，関連研究の章の本文と，各文に対応する引用文献のタイトルとアブストラクトを含むデータセットを公開しています．
 データセットの作り方については，下記の論文 [2] を参照ください．
 なお，本データセットを使用する場合には，以下の文献を引用してください．
 
@@ -53,10 +53,10 @@ The English version of this README will be available soon.
 本データセットはCC BY 4.0 でライセンスされています．[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 
 # 参考文献
-```
-[1] Hiromi Narimatsu, Kohei Koyama, Kohji Dohsaka, Ryuichiro Higashinaka, Yasuhiro Minami, and Hirotoshi Taira. Task definition and integration for scientific- document writing support. In Proceedings of the Second Workshop on Scholarly Document Processing, pp. 18–26, Online, June 2021. Association for Computational Linguistics.
+
+[1] Hiromi Narimatsu, Kohei Koyama, Kohji Dohsaka, Ryuichiro Higashinaka, Yasuhiro Minami, and Hirotoshi Taira. Task definition and integration for scientific- document writing support. In Proceedings of the Second Workshop on Scholarly Document Processing, pp. 18–26, Online, June 2021. Association for Computational Linguistics. https://aclanthology.org/2021.sdp-1.3/
 
 [2] 小林恵大, 小山康平, 成松宏美, 南泰浩. 学術論文PDFからの関連研究章と引用情報の抽出による論文執筆支援のためのデータセット構築. 言語処理学会第28回年次大会, 2022.
-```
+
 
 
