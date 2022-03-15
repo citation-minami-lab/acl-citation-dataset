@@ -52,5 +52,3 @@ The English version of this README will be available soon.
 
 本データセットはCC BY 4.0 でライセンスされています．[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 
-## このデータセットを使用する場合，以下の文献を引用してください．
-
