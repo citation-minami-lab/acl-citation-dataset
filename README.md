@@ -10,13 +10,13 @@ The English version of this README will be available soon.
 小林恵大, 小山康平, 成松宏美, 南泰浩. 学術論文PDFからの関連研究章と引用情報の抽出による論文執筆支援のためのデータセット構築. 言語処理学会第28回年次大会, 2022.
 ```
 
-対象の論文は，ACL Anthology ([https://aclanthology.org/](https://aclanthology.org/))にてCC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)) で公開されている，2016年-2021年の14,201件の論文です．関連研究の章は，”Related Work”, “Related Study”から始まるタイトルの章を対象として抽出しています．
+対象の論文は，ACL Anthology ([https://aclanthology.org/](https://aclanthology.org/))にてCC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)) で公開されている，2016年-2021年の14,871件の論文です．関連研究の章は，”Related Work”, “Related Study”から始まるタイトルの章を対象として抽出しています．
 
 引用文献のアブストラクトはarXiv API ([https://arxiv.org/help/api/](https://arxiv.org/help/api/))とacl-org/acl-anthology [https://github.com/acl-org/acl-anthology](https://github.com/acl-org/acl-anthology) を用いて取得しており，それらで公開されていない論文や，アブストラクトが提供されていない論文は含まれません．
 
 ## データの形式
 データは以下に示す形式で，dataディレクトリ内のjsonファイルに格納されています．
-ファイルサイズの上限の都合で2つのファイルに分割されています．
+ファイルサイズの上限の都合で8つのファイルに分割されています．
 
 ```
 {
@@ -39,7 +39,7 @@ The English version of this README will be available soon.
 - Title : 対象となる論文のタイトル．
 - Author : 論文の著者
 - Url : 論文が公開されているWebサイトのURL
-- Sentences : 関連研究の章本文を文単位に分割したリスト．引用アンカは”%cite{[1]}%”のようにタグ付けされている．以降のリストの項目はこのリスト要素と対応付く．
+- Sentences : 関連研究の章本文を文単位に分割したリスト．引用アンカは`%cite{[1]}`”のようにタグ付けされ，段落の区切りには`<par>`タグが挿入され，文章中の節のタイトルは`%subsection{2.1 subsection}%`のようにタグ付けされている．以降のリストの項目はこのリスト要素と対応付く
 - AnswersCitationWorthiness : 各文に引用がつけられている場合は “1”，そうでなければ “0” としたリスト．
 - CitedNumberList : 各文で引用されている引用文献数のリスト．
 - CollectedCitedNumberList : 各文の引用の内，外部検索 API から対応する文献を取得できた件数のリスト．
