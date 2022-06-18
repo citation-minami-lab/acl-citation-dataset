@@ -1,6 +1,6 @@
 # acl-citation-dataset
 
-The English version of this README will be available soon.
+The English version of this README will be available soon. 
 
 本リポジトリでは，論文執筆支援 [1] に向けたデータセット構築を目的として，ACL Anthologyに含まれる論文PDFファイルから抽出した，関連研究の章の本文と，各文に対応する引用文献のタイトルとアブストラクトを含むデータセットを公開しています．
 データセットの作り方については，下記の論文 [2] を参照ください．
