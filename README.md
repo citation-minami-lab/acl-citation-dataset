@@ -1,7 +1,12 @@
 # ACL-Citation-Dataset
 
 
-This repository contains a dataset of related work sections (sections with titles starting with "Related Work" or "Related Study") and the titles and abstracts of the cited paper in each sentence, which extracted from the PDF files of the articles included in ACL Anthology. 
+For the purpose of building a dataset for paper writing support \[1\], this repository contains a dataset of related work sections (sections with titles starting with "Related Work" or "Related Study") and the titles and abstracts of the cited paper in each sentence, which extracted from the PDF files of the articles included in ACL Anthology. 
+Please refer to the following paper [2] for information on how to create the dataset. Please cite the following paper when using this dataset.
+
+```
+Keita Kobayashi, Kohei Koyama, Hiromi Narimatsu and Yasuhiro Minami. Dataset Construction for Scientific-Document Writing Support by Extracting Related Work Section and Citations from PDF Papers. 13th Language Resources and Evaluation Conference, 2022.
+```
 
 The target articles are those published in the ACL Anthology ([https://aclanthology.org/](https://aclanthology.org/)) under CC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)) between 2016 and 2021. The title, author, and URL are included in the format shown in "Data Format.
 
@@ -48,8 +53,8 @@ Each element in the above json format represents the followings contents.
 This dataset is licensed under CC BY 4.0.
 [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 
-## Please cite this paper if you use this dataset.
+# Reference
 
-```
-Keita Kobayashi, Kohei Koyama, Hiromi Narimatsu and Yasuhiro Minami. Dataset Construction for Scientific-Document Writing Support by Extracting Related Work Section and Citations from PDF Papers. 13th Language Resources and Evaluation Conference, 2022.
-```
+[1] Hiromi Narimatsu, Kohei Koyama, Kohji Dohsaka, Ryuichiro Higashinaka, Yasuhiro Minami, and Hirotoshi Taira. Task definition and integration for scientific- document writing support. In Proceedings of the Second Workshop on Scholarly Document Processing, pp. 18–26, Online, June 2021. Association for Computational Linguistics. https://aclanthology.org/2021.sdp-1.3/
+
+[2] Keita Kobayashi, Kohei Koyama, Hiromi Narimatsu and Yasuhiro Minami. Dataset Construction for Scientific-Document Writing Support by Extracting Related Work Section and Citations from PDF Papers. 13th Language Resources and Evaluation Conference, 2022.
