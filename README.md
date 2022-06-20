@@ -1,22 +1,17 @@
-# acl-citation-dataset
+# ACL-Citation-Dataset
 
-The English version of this README will be available soon. 
 
-本リポジトリでは，論文執筆支援 [1] に向けたデータセット構築を目的として，ACL Anthologyに含まれる論文PDFファイルから抽出した，関連研究の章の本文と，各文に対応する引用文献のタイトルとアブストラクトを含むデータセットを公開しています．
-データセットの作り方については，下記の論文 [2] を参照ください．
-なお，本データセットを使用する場合には，以下の文献を引用してください．
+This repository contains a dataset of related work sections (sections with titles starting with "Related Work" or "Related Study") and the titles and abstracts of the cited paper in each sentence, which extracted from the PDF files of the articles included in ACL Anthology. 
 
-```
-小林恵大, 小山康平, 成松宏美, 南泰浩. 学術論文PDFからの関連研究章と引用情報の抽出による論文執筆支援のためのデータセット構築. 言語処理学会第28回年次大会, 2022.
-```
+The target articles are those published in the ACL Anthology ([https://aclanthology.org/](https://aclanthology.org/)) under CC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)) between 2016 and 2021. The title, author, and URL are included in the format shown in "Data Format.
 
-対象の論文は，ACL Anthology ([https://aclanthology.org/](https://aclanthology.org/))にてCC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)) で公開されている，2016年-2021年の14,871件の論文です．関連研究の章は，”Related Work”, “Related Study”から始まるタイトルの章を対象として抽出しています．
+Note that abstracts of cited papers are obtained using the arXiv API ([https://arxiv.org/help/api/](https://arxiv.org/help/api/)) and acl-org/acl-anthology [https://github.com/acl-org/acl-anthology](https://github.com/acl-org/acl-anthology). Some papers do not include an abstract because they are not published in these repository or abstracts are not provided.
 
-引用文献のアブストラクトはarXiv API ([https://arxiv.org/help/api/](https://arxiv.org/help/api/))とacl-org/acl-anthology [https://github.com/acl-org/acl-anthology](https://github.com/acl-org/acl-anthology) を用いて取得しており，それらで公開されていない論文や，アブストラクトが提供されていない論文は含まれません．
+The Japanese version of the README is [here](/README-ja.md).
+（日本語版のREADMEは[こちら](/README-ja.md)です。）
 
-## データの形式
-データは以下に示す形式で，dataディレクトリ内のjsonファイルに格納されています．
-ファイルサイズの上限の都合で8つのファイルに分割されています．
+
+## Data Format
 
 ```
 {
@@ -34,29 +29,27 @@ The English version of this README will be available soon.
  }
 ```
 
-上記jsonファイルの各要素は以下を表します．
+Each element in the above json format represents the followings contents.
 
-- Title : 対象となる論文のタイトル．
-- Author : 論文の著者
-- Url : 論文が公開されているWebサイトのURL
-- Sentences : 関連研究の章本文を文単位に分割したリスト．引用アンカは`%cite{[1]}`”のようにタグ付けされ，段落の区切りには`<par>`タグが挿入され，文章中の節のタイトルは`%subsection{2.1 subsection}%`のようにタグ付けされている．以降のリストの項目はこのリスト要素と対応付く
-- AnswersCitationWorthiness : 各文に引用がつけられている場合は “1”，そうでなければ “0” としたリスト．
-- CitedNumberList : 各文で引用されている引用文献数のリスト．
-- CollectedCitedNumberList : 各文の引用の内，外部検索 API から対応する文献を取得できた件数のリスト．
-- CitationAnchorList : 各文に含まれる引用アンカのリスト．
-- CitedPaperIndexList : 各文の引用番号のリストであり，この番号が CitedPaperTitle，CitedPaperText のキーとなる．
-- CitedPaperTitle : 引用番号をキーとし，引用文献のタイトルを値とする辞書．
-- CitedPaperText : 引用番号をキーとし，外部検索 API から取得できた被引用文献のアブストラクトを値とする辞書．
+- Title: Title of the target paper.
+- Author: Authors of the target paper.
+- Url: URL of the website where the paper is published.
+- Sentences: A list of sentences divided from the body text of Related Work section. Citation anchors are tagged as "%cite{[1]}%". The following list correspond to this list.
+- AnswersCitationWorthiness: A list of “0” or “1” that indicates whether a sentence has a citation.
+- CitedNumberList: A list of the number of citations in each sentence.
+- CollectedCitedNumberList: A list of the number of cited papers in which the information was retrieved from an external API in each sentence.
+- CitationAnchorList: A list of citation anchors in each sentence.
+- CitedPaperIndexList: A list of citation numbers in each sentence. This number corresponds to the keys for CitedPaperTitle and CitedPaperText.
+- CitedPaperTitle: A dictionary whose keys are citation numbers and whose values are titles of cited papers.．
+- CitedPaperText: A dictionary whose keys are citation numbers and whose values are abstracts of cited papers obtained from an external search API.
 
-# ライセンス
+# License
 
-本データセットはCC BY 4.0 でライセンスされています．[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+This dataset is licensed under CC BY 4.0.
+[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
 
-# 参考文献
+## Please cite this paper if you use this dataset.
 
-[1] Hiromi Narimatsu, Kohei Koyama, Kohji Dohsaka, Ryuichiro Higashinaka, Yasuhiro Minami, and Hirotoshi Taira. Task definition and integration for scientific- document writing support. In Proceedings of the Second Workshop on Scholarly Document Processing, pp. 18–26, Online, June 2021. Association for Computational Linguistics. https://aclanthology.org/2021.sdp-1.3/
-
-[2] 小林恵大, 小山康平, 成松宏美, 南泰浩. 学術論文PDFからの関連研究章と引用情報の抽出による論文執筆支援のためのデータセット構築. 言語処理学会第28回年次大会, 2022.
-
-
-
+```
+Keita Kobayashi, Kohei Koyama, Hiromi Narimatsu and Yasuhiro Minami. Dataset Construction for Scientific-Document Writing Support by Extracting Related Work Section and Citations from PDF Papers. 13th Language Resources and Evaluation Conference, 2022.
+```
