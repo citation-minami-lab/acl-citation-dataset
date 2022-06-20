@@ -5,7 +5,7 @@
 なお，本データセットを使用する場合には，以下の文献を引用してください．
 
 ```
-小林恵大, 小山康平, 成松宏美, 南泰浩. 学術論文PDFからの関連研究章と引用情報の抽出による論文執筆支援のためのデータセット構築. 言語処理学会第28回年次大会, 2022.
+Keita Kobayashi, Kohei Koyama, Hiromi Narimatsu and Yasuhiro Minami. Dataset Construction for Scientific-Document Writing Support by Extracting Related Work Section and Citations from PDF Papers. 13th Language Resources and Evaluation Conference, 2022.
 ```
 
 対象の論文は，ACL Anthology ([https://aclanthology.org/](https://aclanthology.org/))にてCC BY 4.0 ([https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)) で公開されている，2016年-2021年の14,871件の論文です．関連研究の章は，”Related Work”, “Related Study”から始まるタイトルの章を対象として抽出しています．
@@ -54,7 +54,7 @@
 
 [1] Hiromi Narimatsu, Kohei Koyama, Kohji Dohsaka, Ryuichiro Higashinaka, Yasuhiro Minami, and Hirotoshi Taira. Task definition and integration for scientific- document writing support. In Proceedings of the Second Workshop on Scholarly Document Processing, pp. 18–26, Online, June 2021. Association for Computational Linguistics. https://aclanthology.org/2021.sdp-1.3/
 
-[2] 小林恵大, 小山康平, 成松宏美, 南泰浩. 学術論文PDFからの関連研究章と引用情報の抽出による論文執筆支援のためのデータセット構築. 言語処理学会第28回年次大会, 2022.
+[2] Keita Kobayashi, Kohei Koyama, Hiromi Narimatsu and Yasuhiro Minami. Dataset Construction for Scientific-Document Writing Support by Extracting Related Work Section and Citations from PDF Papers. 13th Language Resources and Evaluation Conference, 2022.
 
 
 
